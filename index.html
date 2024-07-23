@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="main.js"></script> -->
+    <title>Document</title>
+</head>
+<body>
+    <div class="section">
+        <fieldset>
+            <legend><img src="./login-6835087_640.webp" alt="" width="100px" height="100px"></legend>
+            <p>Ask me a Question</p>
+            <input type="text" name="" id="inputs" placeholder="Type Something....">
+            <br><br>
+            
+            <button onclick="accept()">Accept</button>
+            <button onclick="decline()">Decline</button>
+        </fieldset>
+       </div>
+    <script>
+        function decline(){
+    alert("Question Declined");
+}
+
+let questions = [
+   "how old are you",
+   "what is your name",
+   "are you happy right now",
+   "what is your profession",
+   "are you a programmer",
+   "how many languages do you know",
+   "are you an engineer",
+   "what is your age",
+   "who is the cuurent owner of tesla",
+   "who is the prime minister of india"
+]
+
+function accept(){
+   let question = document.querySelector("#inputs").value;
+   question = question.toLowerCase();
+   if(questions.includes(question)) window.alert("Your question accepted Chief");
+   else window.alert("Your question is rejected Chief");
+}
+    </script>
+</body>
+</html>
